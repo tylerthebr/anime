@@ -31,7 +31,10 @@ Before opening a PR, follow these steps to properly build and test the project:
 7. Run `npm run test-browser` to make sure you haven't broken anything and all tests are passing.
 8. Create a pull request on the **[`dev`](https://github.com/juliangarnier/anime/tree/dev)** branch.
 
-> **Personal note:** For my own reference — I usually run `npm run test-browser` twice if tests seem flaky on first run, as I've occasionally seen timing-related false failures in the browser test suite.
+> **Personal notes:**
+> - Run `npm run test-browser` twice if tests seem flaky on first run — I've occasionally seen timing-related false failures in the browser test suite.
+> - I'm using this fork primarily for learning purposes, so some experimental changes in `/src` may not be PR-ready.
+> - Useful shortcut: `npm run dev-types` in one terminal and `npm run test-browser` in another works well for a fast feedback loop.
 
 ## Consider supporting this project via GitHub Sponsors
 
