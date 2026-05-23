@@ -35,6 +35,7 @@ Before opening a PR, follow these steps to properly build and test the project:
 > - Run `npm run test-browser` twice if tests seem flaky on first run — I've occasionally seen timing-related false failures in the browser test suite.
 > - I'm using this fork primarily for learning purposes, so some experimental changes in `/src` may not be PR-ready.
 > - Useful shortcut: `npm run dev-types` in one terminal and `npm run test-browser` in another works well for a fast feedback loop.
+> - Node.js v18+ seems to work best here; I ran into some weird issues with v16 and the dev build script.
 
 ## Consider supporting this project via GitHub Sponsors
 
