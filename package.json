@@ -40,10 +40,10 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
-    "@vitest/coverage-v8": "^1.2.0",
+    "@vitest/coverage-v8": "^2.0.0",
     "eslint": "^8.56.0",
     "jsdom": "^24.0.0",
     "rollup": "^4.9.5",
-    "vitest": "^1.2.0"
+    "vitest": "^2.0.0"
   }
 }
