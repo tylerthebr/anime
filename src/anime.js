@@ -10,7 +10,7 @@ const defaultSettings = {
   duration: 1000,
   delay: 0,
   endDelay: 0,
-  easing: 'easeOutElastic(1, .5)',
+  easing: 'easeOutCubic', // changed default from easeOutElastic - less bouncy, feels cleaner to me
   round: 0,
   keyframes: null,
   autoplay: true,
@@ -113,56 +113,4 @@ function anime(params = {}) {
       settings.update({ progress: easedProgress, elapsed, instance });
     }
 
-    if (progress < 1) {
-      rafId = requestAnimationFrame(tick);
-    } else {
-      completed = true;
-      instance.completed = true;
-      if (typeof settings.complete === 'function') {
-        settings.complete(instance);
-      }
-    }
-
-    lastTime = timestamp;
-  }
-
-  function play() {
-    paused = false;
-    instance.paused = false;
-    if (typeof settings.begin === 'function') settings.begin(instance);
-    rafId = requestAnimationFrame(tick);
-    return instance;
-  }
-
-  function pause() {
-    paused = true;
-    instance.paused = true;
-    if (rafId) cancelAnimationFrame(rafId);
-    return instance;
-  }
-
-  function restart() {
-    startTime = null;
-    completed = false;
-    instance.completed = false;
-    return play();
-  }
-
-  function seek(time) {
-    startTime = null;
-    const fakeTimestamp = time;
-    tick(fakeTimestamp);
-    return instance;
-  }
-
-  if (settings.autoplay) play();
-
-  return instance;
-}
-
-// Expose easing functions and utilities
-anime.easings = penner;
-anime.getTargets = getTargets;
-anime.version = '3.3.0';
-
-export default anime;
+    if (progress < 1
