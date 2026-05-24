@@ -39,7 +39,6 @@ Before opening a PR, follow these steps to properly build and test the project:
 > - If `npm i` fails on first try, deleting `node_modules` and `package-lock.json` and re-running usually fixes it.
 > - VSCode tip: the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) helps catch JSDoc annotation mistakes early before running the build.
 > - Chrome seems more reliable than Firefox for `npm run test-browser` in my experience — fewer intermittent failures.
+> - Also worth noting: opening `test/index.html` directly in Chrome (without a local server) sometimes causes CORS issues — use `npx serve .` or similar if tests won't load.
 
-## Consider supporting this project via GitHub Sponsors
-
-I couldn't respond to issues and fix bugs without the support of my sponsors. If you find A
+## Consider supporting this p
