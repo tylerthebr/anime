@@ -17,7 +17,8 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint src/**/*.js",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "sandbox": "node sandbox/index.js"
   },
   "repository": {
     "type": "git",
@@ -46,5 +47,5 @@
     "rollup": "^4.9.5",
     "vitest": "^2.0.0"
   },
-  "notes": "Personal fork for learning/experimenting with anime.js internals. Main branch tracks upstream."
+  "notes": "Personal fork for learning/experimenting with anime.js internals. Main branch tracks upstream. Added sandbox script for quick local testing."
 }
