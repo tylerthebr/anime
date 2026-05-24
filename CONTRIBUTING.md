@@ -40,4 +40,4 @@ Before opening a PR, follow these steps to properly build and test the project:
 > - VSCode tip: the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) helps catch JSDoc annotation mistakes early before running the build.
 > - Chrome seems more reliable than Firefox for `npm run test-browser` in my experience — fewer intermittent failures.
 > - Also worth noting: opening
-> - Remember to check that `index.d.ts` actually updated after running `dev-types` — sometimes it silently fails if there's a JSDoc parse error somewhere in `/src`.
+> - Remember to check that `index.d.ts` actually updated after running `dev-types` — sometimes it silently fails if there's a JSDoc syntax error in one of the source files.
